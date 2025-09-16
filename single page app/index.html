@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Responsive Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                
+                <!-- Left: Brand Logo/Name -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center space-x-2">
+                        <img src="https://via.placeholder.com/32" alt="Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-blue-600">My portfollio</span>
+                    </a>
+                </div>
+
+                <!-- Right: Navigation Links (Desktop) -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="Home.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <!-- Hamburger Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">About</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Services</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Toggle mobile menu
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+ <!-- Navigation -->
+  <header class="bg-white shadow fixed w-full top-0 z-50">
+    </section>
+    <div class="container mx-auto flex items-center justify-between px-4 py-3">
+
+      <div class="text-lg font-bold">My Portfolio</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="md:hidden" id="menu-btn">&#9776;</button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <a href="#home" class="block nav-link">Home</a>
+      <a href="#about" class="block nav-link">About</a>
+      <a href="#projects" class="block nav-link">Projects</a>
+      <a href="#contact" class="block nav-link">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center bg-blue-50 transition-all duration-500">
+      <h1 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
+      <p class="text-lg mb-6">I'm a developer.</p>
+      <img src="IMG_7757.JPG" class="rounded-full shadow-xl border-4 border-blue-100 w-64 h-64 object-cover mx-auto">
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="min-h-screen p-10 bg-white transition-all duration-500">
+      <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+      <p class="mb-4">I am a frontend developer with a love for clean code and responsive design.</p>
+      <h3 class="text-2xl font-semibold mt-6 mb-2">Skills</h3>
+      <ul class="list-disc pl-6 mb-4">
+        <li>HTML, CSS, JavaScript</li>
+        <li>TailwindCSS</li>
+        <li>React (Basics)</li>
+      </ul>
+      <h3 class="text-2xl font-semibold mt-6 mb-2">Work Experience</h3>
+      <ul class="list-disc pl-6 mb-4">
+        <li>2023 - 1ST YEAR XYZ</li>
+        <li>2024 - 2ND YEAR </li>
+      </ul>
+      <h3 class="text-2xl font-semibold mt-6 mb-2">Education</h3>
+      <p>B.SIT. in INFORMATION Science, 123 University</p>
+    </section>
+
+   <section id="projects" class="min-h-screen p-10 bg-gray-50 transition-all duration-500">
+  <h2 class="text-3xl font-semibold mb-10 text-center">Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- Project Card 1 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="WIN_20250901_20_34_57_Pro.jpg" alt="Project 1" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+        <p class="text-gray-600 mb-4">A responsive personal portfolio built with HTML, TailwindCSS, and JavaScript.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-blue-100 text-blue-600 text-sm rounded">HTML</span>
+          <span class="px-2 py-1 bg-green-100 text-green-600 text-sm rounded">TailwindCSS</span>
+          <span class="px-2 py-1 bg-yellow-100 text-yellow-600 text-sm rounded">JavaScript</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="IMG_7750.JPG" alt="Project 2" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Weather App</h3>
+        <p class="text-gray-600 mb-4">A simple weather app that fetches real-time data using OpenWeather API.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-blue-100 text-blue-600 text-sm rounded">HTML</span>
+          <span class="px-2 py-1 bg-green-100 text-green-600 text-sm rounded">CSS</span>
+          <span class="px-2 py-1 bg-purple-100 text-purple-600 text-sm rounded">JavaScript</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="IMG_7749.JPG" alt="Project 3" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Task Manager</h3>
+        <p class="text-gray-600 mb-4">A task management tool with add/edit/delete functionality and local storage.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-blue-100 text-blue-600 text-sm rounded">HTML</span>
+          <span class="px-2 py-1 bg-red-100 text-red-600 text-sm rounded">CSS</span>
+          <span class="px-2 py-1 bg-yellow-100 text-yellow-600 text-sm rounded">JavaScript</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  </main>
+</body>
+</html>
